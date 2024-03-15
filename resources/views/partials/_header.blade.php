@@ -37,5 +37,9 @@
                 </nav>
             </div>
     </div>
-        <div class="header-bottom"></div>
+        <div class="header-bottom">
+            <div class='jumbo'>
+                <!-- <img src="{{Vite::asset('/resources\images\jumbotron.jpg')}}" alt=""> -->
+            </div>
+        </div>
 </header>
