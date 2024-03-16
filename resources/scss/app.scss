@@ -131,3 +131,118 @@ main.comics {
         width: 200px;
     }
 }
+
+footer {
+    .footer-top {
+        .container {
+            height: 100%;
+
+            ul {
+                height: 100%;
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                li {
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+                    div {
+                        width: 55px;
+                        padding-right: 1rem;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        height: var(--middle-header-height);
+        background-color: var(--header-main-color);
+        color: white;
+    }
+    .footer-middle {
+        background-image: url("../images/footer-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .col {
+            &.link-col {
+                padding-block: 3rem;
+                height: 560px;
+
+                .row {
+                    width: 85%;
+                    h4 {
+                        color: white;
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                    ul {
+                        list-style: none;
+                        padding: 0;
+
+                        li {
+                            a {
+                                text-decoration: none;
+                                color: grey;
+                            }
+                        }
+                    }
+                }
+                p {
+                    color: gray;
+                    margin-bottom: 0;
+                    a {
+                        text-decoration: none;
+                        color: var(--header-main-color);
+                    }
+                }
+            }
+
+            &.logo-col {
+                overflow-y: hidden;
+                height: 560px;
+
+                .footer-logo {
+                    height: 100%;
+                    background-image: url("../images/dc-logo-bg.png");
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        height: 100px;
+        background-color: #303030;
+        padding-block: 1.5rem;
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .sign-up {
+                border-radius: 0;
+                border: 2px solid var(--header-main-color);
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            .contact-col {
+                display: flex;
+                align-items: center;
+                span {
+                    margin-inline: 0.6rem;
+                    &.follow-us {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                        margin-right: 1rem;
+                        color: var(--header-main-color);
+                    }
+                }
+            }
+        }
+    }
+}
