@@ -120,6 +120,10 @@ main.comics {
                 width: 100%;
             }
         }
+        &:hover .card-img {
+            filter: brightness(70%);
+            cursor: pointer;
+        }
     }
 
     .btn-primary {
@@ -129,6 +133,103 @@ main.comics {
         font-weight: 700;
         border-radius: 0;
         width: 200px;
+    }
+}
+
+.comic-detail {
+    .detail-top {
+        background-color: var(--header-main-color);
+        .container {
+            width: 1100px;
+        }
+    }
+
+    .detail-middle {
+        background-color: white;
+        padding-block: 3rem;
+        .container {
+            width: 1100px;
+            .col-8 {
+                h2 {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+                .row {
+                    .box-info {
+                        background-color: #55ba59;
+                        border-bottom: 1px solid black;
+                        display: flex;
+                        align-items: center;
+                        color: white;
+                        font-weight: 700;
+                        margin: 1rem;
+                        .col-9 {
+                            padding: 1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .price {
+                                text-transform: capitalize;
+                            }
+                            .availability {
+                                text-transform: uppercase;
+                                color: #a6f58e;
+                            }
+                        }
+                        .col-3 {
+                            padding: 1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-left: 1px solid black;
+                        }
+                    }
+                }
+            }
+        }
+        .col-4 {
+            text-align: end;
+            text-transform: capitalize;
+            p {
+                font-weight: 600;
+                margin: 0;
+                color: gray;
+            }
+        }
+    }
+
+    .detail-bottom {
+        background-color: #f6f6f6;
+        padding-block: 1.5rem;
+        .container {
+            width: 1100px;
+            padding-bottom: 3rem;
+            .row {
+                .col {
+                    div {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 3rem;
+                        padding-block: 1rem;
+                        border-block: 1px solid rgba(128, 128, 128, 0.5);
+                        font-weight: 700;
+                        color: gray;
+
+                        span {
+                            text-align: left;
+                            &:nth-of-type(1) {
+                                width: 150px;
+                            }
+                            &:nth-of-type(2) {
+                                flex-grow: 1;
+                                color: var(--header-main-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
