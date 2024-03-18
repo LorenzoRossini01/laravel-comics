@@ -1,37 +1,15 @@
 @extends('layout.app')
-@section('page-title', 'comics')
+@section('page-title', 'comic details')
 
 
 @section('main-content')
-<main class="comics">
-
-    <div class="container d-flex flex-column align-items-center">
-        <div class='section-title'>
-            <h3>current series</h3>
-        </div>
-        <div class="row">
-            @foreach($comics as $comic)
-            <div class="col-6 col-md-4 col-lg-2">
-                <div class="card">
-                    <a href="">
-                        <div class="card-img">
-                            <img src="{{$comic['thumb']}}" alt="">
-                        </div>
-                        <div class="card-title">{{$comic['series']}}</div>
-                    </a>
-                </div>
-            </div>
-            @endforeach
-        </div>
-        <div class="btn btn-primary">load more</div>
-    </div>
-</main>
-    <main class="comic-detail">
-
-        
+<main class="comic-detail">
         <div class="detail-top">
             <div class="container">
-                <img src="" alt="">
+                <div class="thumb-container">
+
+                    <img src="{{$comic['thumb']}}" alt="" class="img-fluid">
+                </div>
             </div>
         </div>
 
@@ -40,12 +18,12 @@
 
                 <div class="row g-3">
                     <div class="col-8">
-                        <h2>titolo fumetto</h2>
+                        <h2>{{$comic['title']}}</h2>
                         <div>
                             <div class="row">
                                 <div class='box-info'>
                                     <div class="col-9">
-                                        <span class='price'>u.s. price:prezzo</span>
+                                        <span class='price'>u.s. price:{{$comic['price']}}</span>
                                         <span class='availability'>disponibilità</span>
                                     </div>
                                     <div class="col-3">
@@ -55,7 +33,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam odit totam illum enim saepe commodi ullam aliquam dignissimos, eligendi quidem aut earum laborum, temporibus natus quibusdam in officia cumque possimus!</p>
+                        <p>{{$comic['description']}}</p>
                     </div>
                     <div class="col-4">
                         <p>advertisment</p>
@@ -83,15 +61,15 @@
                     <h3>Specs</h3>
                     <div>
                         <span>Series:</span>
-                        <span>titolo serie</span>
+                        <span>{{$comic['series']}}</span>
                     </div>
                     <div>
                         <span>U.S. Price:</span>
-                        <span>prezzo</span>
+                        <span>{{$comic['price']}}</span>
                     </div>
                     <div>
                         <span>On Sale Date::</span>
-                        <span>data di vendita</span>
+                        <span>{{$comic['sale_date']}}</span>
                     </div>
                 </div>
             </div>

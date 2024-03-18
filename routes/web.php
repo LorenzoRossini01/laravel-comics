@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,39 +15,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/characters', function () {
-  return view('characters');
-})->name('characters');
+Route::get('/', [PageController::class, 'homepage'])->name('homepage');
 
-Route::get('/comics', function () {
-  $comics=config('comics');
-  return view('comics', compact('comics'));
-})->name('comics');
+Route::get('/characters', [PageController::class, 'characters'])->name('characters');
 
-Route::get('/movies', function () {
-  return view('movies');
-})->name('movies');
+Route::get('/comics', [PageController::class, 'comics'])->name('comics');
 
-Route::get('/tv', function () {
-  return view('tv');
-})->name('tv');
+Route::get('/comicDetails/{index}/{title}', [PageController::class, 'comicDetails'])->name('comicDetails');
 
-Route::get('/games', function () {
-  return view('games');
-})->name('games');
+Route::get('/movies', [PageController::class, 'movies'])->name('movies');
 
-Route::get('/collectibles', function () {
-  return view('collectibles');
-})->name('collectibles');
+Route::get('/tv', [PageController::class, 'tv'])->name('tv');
 
-Route::get('/videos', function () {
-  return view('videos');
-})->name('videos');
+Route::get('/games', [PageController::class, 'games'])->name('games');
 
-Route::get('/fans', function () {
-  return view('fans');
-})->name('fans');
+Route::get('/collectibles', [PageController::class, 'collectibles'])->name('collectibles');
 
-Route::get('/news', function () {
-  return view('news');
-})->name('news');
+Route::get('/videos', [PageController::class, 'videos'])->name('videos');
+
+Route::get('/fans', [PageController::class, 'fans'])->name('fans');
+
+Route::get('/news', [PageController::class, 'news'])->name('news');
